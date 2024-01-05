@@ -55,7 +55,7 @@ const Logo = (_props: ILogoProps) => {
           stroke="#ffffff"
           stroke-width="4"
           stroke-opacity="1"
-          stroke-miterlimit="4"
+          strokeMiterlimit="4"
         />
       </g>
       <path
@@ -67,7 +67,7 @@ const Logo = (_props: ILogoProps) => {
         stroke="#ffffff"
         stroke-width="4"
         stroke-opacity="1"
-        stroke-miterlimit="4"
+        strokeMiterlimit="4"
       />
       <path
         stroke-linecap="round"
@@ -78,7 +78,7 @@ const Logo = (_props: ILogoProps) => {
         stroke="#ffffff"
         stroke-width="4"
         stroke-opacity="1"
-        stroke-miterlimit="4"
+        strokeMiterlimit="4"
       />
       <path
         stroke-linecap="round"
@@ -89,7 +89,7 @@ const Logo = (_props: ILogoProps) => {
         stroke="#ffffff"
         stroke-width="4"
         stroke-opacity="1"
-        stroke-miterlimit="4"
+        strokeMiterlimit="4"
       />
     </svg>
   );

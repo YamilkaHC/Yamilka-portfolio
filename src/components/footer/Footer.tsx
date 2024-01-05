@@ -1,11 +1,9 @@
-import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 
 const Footer = () => (
-  <Background color="bg-gray-100">
-    <Section>
-      hola
-      {/* <CenteredFooter
+  <Section>
+    hola
+    {/* <CenteredFooter
         logo={<Logo />}
         iconList={
           <>
@@ -68,8 +66,7 @@ const Footer = () => (
           </Link>
         </li>
       </CenteredFooter> */}
-    </Section>
-  </Background>
+  </Section>
 );
 
 export { Footer };
