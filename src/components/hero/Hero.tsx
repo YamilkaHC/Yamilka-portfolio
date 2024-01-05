@@ -3,7 +3,10 @@ import LayoutAnimationY from '../layout/LayoutAnimateY';
 import { Section } from '../layout/Section';
 
 const Hero = () => (
-  <Section yPadding=" min-h-[80vh] flex flex-col gap-1 justify-center  items-start px-8 md:px-10 lg:px-20 py-10  border border-white border-4 mb-5 lg:mx-20 md:mx-16 mx-4 mt-10">
+  <Section
+    id="home"
+    yPadding=" min-h-[80vh] flex flex-col gap-1 justify-center  items-start px-8 md:px-10 lg:px-20 py-10  border border-white border-4 mb-5 lg:mx-20 md:mx-16 mx-4 mt-10"
+  >
     <LayoutAnimationY delay={0.2}>
       <h1 className="left-3 whitespace-pre-line text-3xl  font-bold  leading-[30px] text-white md:text-4xl md:leading-[45px] lg:text-6xl lg:leading-[60px]">
         Hi, I'm Yamilka Henriquez <br /> Web Developer & <br /> Programming
