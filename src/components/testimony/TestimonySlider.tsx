@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Background } from '../background/Background';
+import LayoutAnimationY from '../layout/LayoutAnimateY';
+import TitleSection from '../titleSection/TitleSection';
 import TestimonyCard from './TestimonyCard';
 
 const TestimonyData = [
@@ -26,13 +27,19 @@ const TestimonyData = [
 
 const TestimonySlider = () => {
   return (
-    <Background color="bg-primary-400 ">
-      <div className="flex flex-wrap justify-center gap-8 px-3  py-5">
+    <div
+      id="testimonials"
+      className=" flex min-h-[100vh] flex-col justify-center  "
+    >
+      <TitleSection title="Testimonials" />
+      <div className="flex flex-wrap justify-center gap-8">
         {TestimonyData.map((data, index) => (
-          <TestimonyCard data={data} key={index} />
+          <LayoutAnimationY key={index} delay={0.2 * index}>
+            <TestimonyCard data={data} />
+          </LayoutAnimationY>
         ))}
       </div>
-    </Background>
+    </div>
   );
 };
 

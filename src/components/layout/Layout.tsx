@@ -11,9 +11,9 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Meta title={AppConfig.title} description={AppConfig.description} />
-      <div>
+      <div className="min-h-[100vh] ">
         <Menu />
-        <div className="ml-[100px]">{children}</div>
+        <div className="md:ml-[100px]">{children}</div>
       </div>
     </>
   );

@@ -3,3 +3,41 @@
 @tailwind components;
 
 @tailwind utilities;
+
+html, body,  #__next {
+  min-height: 100vh;
+}
+
+html{
+  background-color: #001D3D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  right: 0;
+  z-index: 10;
+  height: 10px;
+  background: #3B82F6;
+  transform-origin: 0%;
+}
+@media screen and (min-width: 768px) {
+  .vertical-align{
+    writing-mode: vertical-lr
+  }
+ 
+}
+
+@media screen and (max-width: 767px) {
+  .progress-bar {
+    left: 0px;
+  }
+  
+ 
+}
+
+
