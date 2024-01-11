@@ -5,7 +5,7 @@ type ILogoProps = {
 const Logo = (_props: ILogoProps) => {
   return (
     <svg
-      className="h-[60px] w-[60px] stroke-white text-white"
+      className="h-[50px] w-[50px] stroke-white text-white sm:h-[60px] sm:w-[60px]"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="89"

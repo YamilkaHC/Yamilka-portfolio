@@ -39,9 +39,9 @@ const TestimonyCard = ({ data }: { data: TestimonyCardProps }) => {
               src={data.image}
               width={65}
               height={65}
-              // className={`rounded-full ${
-              //   isHovered && 'shadow-lg shadow-[#62616157]'
-              // }`}
+              className={`rounded-full ${
+                isHovered ? ' shadow-[#62616157]' : ''
+              }`}
               alt="person-photo"
             />
             <span className="text-[15px] font-medium">

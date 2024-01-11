@@ -3,16 +3,35 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 const Footer = () => (
-  <div className="flex h-[200px] flex-col  content-center items-center justify-center  py-5">
+  <div className="mb-10 flex h-[200px]  flex-col content-center items-center justify-center py-5  md:mb-0">
     <div className="flex justify-center gap-3 ">
-      <Link href="https://www.linkedin.com/in/yamilka-cosme-b4045314b">
-        <FaLinkedin size={30} color="white" />
+      <Link
+        legacyBehavior
+        passHref
+        href="https://www.linkedin.com/in/yamilka-cosme-b4045314b"
+      >
+        <a target="_blank">
+          <FaLinkedin
+            size={30}
+            className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+          />
+        </a>
       </Link>
-      <Link href="https://github.com/YamiYamir">
-        <FaGithub size={30} color="white" />
+
+      <Link legacyBehavior passHref href="https://github.com/YamiYamir">
+        <a target="_blank">
+          <FaGithub
+            size={30}
+            className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+          />
+        </a>
       </Link>
+
       <Link href="mailto:yamilka_268465460@hotmail.com">
-        <IoMdMail size={32} color="white" />
+        <IoMdMail
+          size={32}
+          className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+        />
       </Link>
     </div>
     <div className="flex justify-center gap-3 ">
