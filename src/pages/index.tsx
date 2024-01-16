@@ -1,6 +1,5 @@
 import { motion, useScroll } from 'framer-motion';
 
-import AboutMe from '@/components/aboutMe/AboutMe';
 import { Footer } from '@/components/footer/Footer';
 import { Hero } from '@/components/hero/Hero';
 import Layout from '@/components/layout/Layout';
@@ -20,10 +19,9 @@ const Index = () => {
       <div className="text-gray-600 antialiased">
         <div className="h-[2px]" id="home"></div>
         <Hero />
-        <AboutMe />
         <SelectedWork />
-        <SkillsSection />
         <ResumeSection />
+        <SkillsSection />
         <TestimonySlider />
         <Footer />
       </div>

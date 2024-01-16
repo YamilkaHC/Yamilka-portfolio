@@ -18,7 +18,7 @@ const TestimonyCard = ({ data }: { data: TestimonyCardProps }) => {
       <div
         className={
           isHovered
-            ? 'fixed left-0 top-0 h-full w-full bg-[#00000038] transition-all md:left-[100px]'
+            ? 'md:fixed md:left-0 md:top-0 md:h-full md:w-full md:bg-[#00000038] md:transition-all '
             : ''
         }
       ></div>
@@ -31,7 +31,7 @@ const TestimonyCard = ({ data }: { data: TestimonyCardProps }) => {
       >
         <div
           ref={elementRef}
-          className="flex min-h-[430px] max-w-[330px] flex-col justify-between rounded-3xl bg-primary-400 px-8  py-10 text-white shadow-lg"
+          className="flex flex-col justify-between rounded-3xl bg-primary-400 px-8 py-10 text-white  shadow-lg md:min-h-[430px] md:max-w-[330px]"
         >
           <div className="flex flex-col gap-4">
             <Image

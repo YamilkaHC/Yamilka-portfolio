@@ -2,6 +2,7 @@ import React from 'react';
 
 import { isInSequence } from '@/helpers';
 
+import LayoutAnimationY from '../layout/LayoutAnimateY';
 import TitleSection from '../titleSection/TitleSection';
 
 type Resume = {
@@ -23,7 +24,7 @@ const ResumeSection = () => {
     {},
     {},
     {
-      date: '2022 May - current',
+      date: '2022 May - Current',
       position: 'Technology Director',
       place: 'PerfectoLabs',
       description:
@@ -39,55 +40,62 @@ const ResumeSection = () => {
     {},
   ];
   return (
-    <div
-      id="resume"
-      className=" mb-20 flex min-h-[100vh] flex-col justify-center  "
-    >
+    <div id="resume" className=" mb-20 flex  flex-col justify-center  ">
       <TitleSection title="Resume" />
       <div className="relative   mx-4 grid grid-cols-2 gap-y-6   md:mx-12  lg:mx-20">
         <div className="absolute  ml-0   h-full w-[1px] bg-secondary-500  md:left-1/2 md:ml-[-2px] md:flex   "></div>
-        {resume.map((data, index) => (
-          <div
-            key={`resume-${index}`}
-            className={`group relative flex-wrap  md:flex ${
-              isInSequence(index + 1)
-                ? 'ml-4  flex-row-reverse justify-start md:ml-0  md:mr-4'
-                : 'ml-4'
-            } col-span-2 md:col-span-1  lg:gap-5 ${!data.position && 'hidden'}`}
-          >
-            <div
-              className={`flex max-w-[15px] ${
-                !(index % 2) && 'md:hidden'
-              } absolute left-[-23px] mt-[6px] max-h-[15px] min-h-[15px] min-w-[15px]  rounded-full bg-white opacity-100 transition-all  group-hover:transition-all md:left-[-25px] `}
-            ></div>
-            <p className="mt-[2px] font-semibold text-gray-500  opacity-100 transition-all md:opacity-50 md:group-hover:opacity-100 md:group-hover:transition-all">
-              {data?.date}
-            </p>
-            <div
-              className={`opacity-100 transition-all md:opacity-50 md:group-hover:opacity-100 md:group-hover:transition-all `}
+        {resume.map((data, index) => {
+          return (
+            <LayoutAnimationY
+              className={`group col-span-2  md:col-span-1 md:flex  ${
+                !data.position && 'hidden'
+              }`}
+              key={`resume-${index}`}
+              delay={0.2}
             >
               <div
-                className={`flex items-center gap-2 ${
-                  isInSequence(index + 1) && ' md:justify-end'
-                }`}
+                className={`
+                 relative flex-wrap  md:flex ${
+                   isInSequence(index + 1)
+                     ? 'ml-4  flex-row-reverse justify-start md:ml-0 md:mr-4'
+                     : 'ml-4'
+                 }   lg:gap-5 `}
               >
-                <h3
-                  className={`space-x-16 font-extrabold  uppercase text-secondary-500  lg:text-xl `}
+                <div
+                  className={`flex max-w-[15px] ${
+                    !(index % 2) && 'md:hidden'
+                  } absolute left-[-23px] mt-[6px] max-h-[15px] min-h-[15px] min-w-[15px]  rounded-full bg-white opacity-100 transition-all  group-hover:transition-all md:left-[-25px] `}
+                ></div>
+                <p className="mt-[2px] font-semibold text-gray-500  opacity-100 transition-all md:opacity-50 md:group-hover:opacity-100 md:group-hover:transition-all">
+                  {data?.date}
+                </p>
+                <div
+                  className={`opacity-100 transition-all md:opacity-50 md:group-hover:opacity-100 md:group-hover:transition-all `}
                 >
-                  {data?.position}
-                </h3>
-                <p className="font-semibold text-gray-500">{data?.place}</p>
+                  <div
+                    className={`flex items-center gap-2 ${
+                      isInSequence(index + 1) && ' md:justify-end'
+                    }`}
+                  >
+                    <h3
+                      className={`space-x-16 font-extrabold  uppercase text-secondary-500  lg:text-xl `}
+                    >
+                      {data?.position}
+                    </h3>
+                    <p className="font-semibold text-gray-500">{data?.place}</p>
+                  </div>
+                  <p
+                    className={`max-w-[450px] text-white ${
+                      isInSequence(index + 1) && ' md:text-end '
+                    }`}
+                  >
+                    {data?.description}
+                  </p>
+                </div>
               </div>
-              <p
-                className={`max-w-[450px] text-white ${
-                  isInSequence(index + 1) && ' md:text-end '
-                }`}
-              >
-                {data?.description}
-              </p>
-            </div>
-          </div>
-        ))}
+            </LayoutAnimationY>
+          );
+        })}
       </div>
     </div>
   );

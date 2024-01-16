@@ -7,7 +7,7 @@ type TitleSectionn = {
 };
 const TitleSection = ({ title }: TitleSectionn) => {
   return (
-    <div className="mx-4 mb-10  md:mx-16  lg:mx-20">
+    <div className="mx-4 mb-10 mt-2 md:mx-16  lg:mx-20">
       <LayoutAnimateX delay={0.4}>
         <h2 className="  space-x-16 text-2xl font-semibold uppercase tracking-widest text-white md:text-4xl lg:text-5xl">
           {title}

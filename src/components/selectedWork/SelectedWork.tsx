@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaArrowRight, FaMousePointer } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
 import LayoutAnimateY from '../layout/LayoutAnimateY';
@@ -59,23 +59,12 @@ const SelectedWork = () => {
   ];
 
   return (
-    <div
-      id="selected-work"
-      className=" flex min-h-[100vh] flex-col justify-center  "
-    >
+    <div id="selected-work" className=" mt-24 flex  flex-col justify-center  ">
       <TitleSection title="Selected Work" />
       {works.map((currentWork, index) => (
         <div className="mb-24" key={`work-${index}`}>
           <LayoutAnimateY delay={0.2}>
             <ScrollContainer className="hide-scrollbar relative flex w-full gap-4  overflow-x-scroll">
-              <div className="absolute bottom-10 left-10 ">
-                <FaMousePointer
-                  className="animate-bounce"
-                  color="white"
-                  size={20}
-                />
-                <p className="text-white">Drag</p>
-              </div>
               {currentWork.images.map((image, index2) => (
                 <Image
                   key={`image-${index2}`}

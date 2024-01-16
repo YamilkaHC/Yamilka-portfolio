@@ -40,6 +40,12 @@ html {
  
 }
 
+.grid-respo{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  justify-content: flex-start;
+}
+
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

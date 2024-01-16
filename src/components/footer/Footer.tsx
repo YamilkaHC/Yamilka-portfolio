@@ -10,7 +10,10 @@ const Footer = () => (
         passHref
         href="https://www.linkedin.com/in/yamilka-cosme-b4045314b"
       >
-        <a target="_blank">
+        <a
+          target="_blank"
+          title="https://www.linkedin.com/in/yamilka-cosme-b4045314b"
+        >
           <FaLinkedin
             size={30}
             className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
@@ -19,7 +22,7 @@ const Footer = () => (
       </Link>
 
       <Link legacyBehavior passHref href="https://github.com/YamiYamir">
-        <a target="_blank">
+        <a title="https://github.com/YamiYamir" target="_blank">
           <FaGithub
             size={30}
             className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
@@ -29,8 +32,9 @@ const Footer = () => (
 
       <Link href="mailto:yamilka_268465460@hotmail.com">
         <IoMdMail
-          size={32}
-          className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+          title="yamilka_268465460@hotmail.com"
+          size={37}
+          className="mt-[-3px] text-white transition-all hover:text-[#cccccc] hover:transition-all"
         />
       </Link>
     </div>
