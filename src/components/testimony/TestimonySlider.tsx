@@ -32,7 +32,7 @@ const TestimonySlider = () => {
       className=" mt-[8rem] flex  flex-col justify-center  "
     >
       <TitleSection title="Testimonials" />
-      <div className="mx-4 flex flex-wrap justify-center gap-8">
+      <div className=" mx-9 flex flex-wrap justify-center gap-8 md:mx-4">
         {TestimonyData.map((data, index) => (
           <LayoutAnimationY key={index} delay={0.2 * index}>
             <TestimonyCard data={data} />

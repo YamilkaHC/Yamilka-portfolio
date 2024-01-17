@@ -17,7 +17,7 @@ const Hero = () => (
     </LayoutAnimateX>
 
     <LayoutAnimationY delay={0.4}>
-      <h2 className="font-bold leading-loose tracking-widest text-secondary-500 md:text-xl md:leading-hero">
+      <h2 className="font-bold leading-loose tracking-widest text-secondary-400 md:text-xl md:leading-hero">
         WELCOME TO MY ONLINE PORTFOLIO AND CV
       </h2>
     </LayoutAnimationY>
@@ -33,7 +33,7 @@ const Hero = () => (
       <div className="flex flex-wrap items-end justify-start gap-2 sm:gap-3">
         <Link legacyBehavior passHref href="/assets/doc/resume.pdf">
           <a
-            className="mt-5 block rounded-full bg-blue-500 px-6 py-3 font-bold tracking-widest text-white transition-all hover:bg-[#2f72de] hover:transition-all md:px-9"
+            className="mt-5 block rounded-full bg-blue-600 px-6 py-3 font-bold tracking-widest text-white transition-all hover:bg-[#2f72de] hover:transition-all md:px-9"
             target="_blank"
           >
             RESUMEN
