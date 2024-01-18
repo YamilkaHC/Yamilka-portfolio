@@ -8,11 +8,11 @@ const Footer = () => (
       <Link
         legacyBehavior
         passHref
-        href="https://www.linkedin.com/in/yamilka-cosme-b4045314b"
+        href="https://www.linkedin.com/in/yamilka-henriquez-c-b4045314b/"
       >
         <a
           target="_blank"
-          title="https://www.linkedin.com/in/yamilka-cosme-b4045314b"
+          title="https://www.linkedin.com/in/yamilka-henriquez-c-b4045314b/"
         >
           <FaLinkedin
             size={30}
