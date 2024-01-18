@@ -52,7 +52,7 @@ const Hero = () => (
             >
               <FaLinkedin
                 size={30}
-                className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+                className="w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[37px]"
               />
             </a>
           </Link>
@@ -61,7 +61,7 @@ const Hero = () => (
             <a title="https://github.com/YamiYamir" target="_blank">
               <FaGithub
                 size={30}
-                className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+                className="w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[30px]"
               />
             </a>
           </Link>
@@ -69,7 +69,7 @@ const Hero = () => (
             <IoMdMail
               title="yamilka_268465460@hotmail.com"
               size={37}
-              className="mb-[-4px] text-white transition-all hover:text-[#cccccc] hover:transition-all"
+              className="mb-[-4px] w-[33px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[37px]"
             />
           </Link>
         </div>
