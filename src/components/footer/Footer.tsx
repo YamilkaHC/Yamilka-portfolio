@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 const Footer = () => (
-  <div className="mb-10 flex h-[200px]  flex-col content-center items-center justify-center py-5  md:mb-0">
+  <div className="mb-2 flex h-[200px]  flex-col content-center items-center justify-center py-5  md:mb-0">
     <div className="flex justify-center gap-3 ">
       <Link
         legacyBehavior
@@ -16,7 +16,7 @@ const Footer = () => (
         >
           <FaLinkedin
             size={30}
-            className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+            className="w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[30px]"
           />
         </a>
       </Link>
@@ -25,7 +25,7 @@ const Footer = () => (
         <a title="https://github.com/YamiYamir" target="_blank">
           <FaGithub
             size={30}
-            className="text-white transition-all hover:text-[#cccccc] hover:transition-all"
+            className="  w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[30px]"
           />
         </a>
       </Link>
@@ -34,7 +34,7 @@ const Footer = () => (
         <IoMdMail
           title="yamilka_268465460@hotmail.com"
           size={37}
-          className="mt-[-3px] text-white transition-all hover:text-[#cccccc] hover:transition-all"
+          className=" mt-[-3px] w-[32px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[37px]"
         />
       </Link>
     </div>

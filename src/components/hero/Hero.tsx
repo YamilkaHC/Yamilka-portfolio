@@ -8,7 +8,7 @@ import LayoutAnimationY from '../layout/LayoutAnimateY';
 import { Section } from '../layout/Section';
 
 const Hero = () => (
-  <Section yPadding=" min-h-[80vh]  flex flex-col gap-1 justify-center  items-start px-8 md:px-10 lg:px-20 py-10  border border-white border-4 mb-5 lg:mx-20 md:mx-16 mx-4 mt-10">
+  <Section yPadding=" hero-height  flex flex-col gap-1 justify-center  items-start px-8 md:px-10 lg:px-20 py-10  border border-white border-4 lg:mx-20 md:mx-16 mx-4 ">
     <LayoutAnimateX delay={0.2}>
       <h1 className="left-3 whitespace-pre-line text-3xl  font-bold  leading-[30px] text-white md:text-4xl md:leading-[45px] lg:text-6xl lg:leading-[60px]">
         Hi, I'm Yamilka Henriquez
@@ -32,14 +32,14 @@ const Hero = () => (
       <div className="mt-5 flex flex-wrap items-center justify-start gap-2 sm:gap-3">
         <Link legacyBehavior passHref href="/assets/doc/resume.pdf">
           <a
-            className=" block rounded-full bg-blue-600 px-6 py-3 font-bold tracking-widest text-white transition-all hover:bg-[#2f72de] hover:transition-all md:px-9"
+            className=" block rounded-full bg-blue-600 px-8 py-3 font-bold tracking-widest text-white transition-all hover:bg-[#2f72de] hover:transition-all md:px-9"
             target="_blank"
           >
             RESUME
           </a>
         </Link>
 
-        <div className="flex h-full items-center justify-center gap-1 sm:gap-2 ">
+        <div className="flex h-full items-center justify-center gap-2 ">
           <Link
             legacyBehavior
             passHref
@@ -51,7 +51,7 @@ const Hero = () => (
             >
               <FaLinkedin
                 size={27}
-                className="mr-[-4px] w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[37px]"
+                className="w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:mr-[-4px] md:w-[37px]"
               />
             </a>
           </Link>

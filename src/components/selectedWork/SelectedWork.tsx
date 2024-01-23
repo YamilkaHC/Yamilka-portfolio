@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { PiHandSwipeLeftFill } from 'react-icons/pi';
 import ScrollContainer from 'react-indiana-drag-scroll';
+
+import useIsMobile from '@/hooks/useIsMobileDevice';
 
 import LayoutAnimateY from '../layout/LayoutAnimateY';
 import TitleSection from '../titleSection/TitleSection';
@@ -58,15 +61,28 @@ const SelectedWork = () => {
     },
   ];
 
+  const isMobile = useIsMobile();
+  const [onClick, setOnClick] = useState(false);
+
   return (
     <div id="selected-work" className=" mt-24 flex  flex-col justify-center  ">
       <TitleSection title="Selected Work" />
       {works.map((currentWork, index) => (
-        <div className="mb-24" key={`work-${index}`}>
+        <div key={`work-${index}`} className=" mb-24">
           <LayoutAnimateY delay={0.2}>
             <ScrollContainer className="hide-scrollbar relative flex w-full gap-4  overflow-x-scroll">
+              <PiHandSwipeLeftFill
+                size={35}
+                className={`${
+                  isMobile ? 'translate-hand md:hidden' : 'hidden'
+                } ${
+                  onClick && 'hidden'
+                } absolute bottom-5 left-10 z-10 text-secondary-500 `}
+              />
               {currentWork.images.map((image, index2) => (
                 <Image
+                  onClick={() => setOnClick(true)}
+                  onTouchStart={() => setOnClick(true)}
                   key={`image-${index2}`}
                   src={image.url}
                   alt={image.alt}

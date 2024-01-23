@@ -13,7 +13,7 @@ const Menu = () => {
         isScrollingDown ? 'scrolledDown' : 'scrolledUp'
       } fixed bottom-0 z-10 flex  h-[75px] w-full content-center items-center justify-center gap-2 border-t border-gray-500   bg-primary-500 px-1 md:left-0 md:h-full md:w-[100px] md:flex-col md:gap-10 md:border-r md:border-t-0`}
     >
-      <nav className="flex flex-nowrap items-center justify-center gap-2 md:flex-col md:gap-6">
+      <nav className="relative flex flex-nowrap items-center justify-center gap-2 md:flex-col md:gap-6">
         <Link
           className="change-order1 mx-2 md:mx-0 md:mb-2"
           aria-label="Logo"

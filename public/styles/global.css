@@ -25,6 +25,12 @@ html {
   background: #3B82F6;
   transform-origin: 0%;
 }
+
+.hero-height{
+  height: calc(100vh - 80px);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 @media screen and (min-width: 768px) {
   .vertical-align{
     writing-mode: vertical-lr
@@ -33,6 +39,19 @@ html {
 }
 
 @media screen and (max-width: 767px) {
+
+  .translate-hand{
+    animation-name: translate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  
+  .hero-height{
+    height: calc(100vh - 220px);
+    margin-top: 40px;
+    margin-bottom: 180px;
+  }
+
   .progress-bar {
     left: 0px;
   }
@@ -89,3 +108,11 @@ transition: transform 0.4s ease-out;
 }
 
 
+@keyframes translate {
+  0% {
+      -webkit-transform: translateX(0px);
+  }
+  50% {
+      -webkit-transform: translateX(25px);
+  }
+}

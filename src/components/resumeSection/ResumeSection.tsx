@@ -10,6 +10,7 @@ type Resume = {
   position?: string;
   place?: string;
   description?: string;
+  index?: number;
 };
 
 const ResumeSection = () => {
@@ -18,12 +19,14 @@ const ResumeSection = () => {
       date: '2023 April -  Current',
       position: 'Web Developer',
       place: 'OGTIC',
+      index: 2,
       description:
         'Collaborate as a team in the construction of multiple web applications for markets such as gob.do, becas.gob.do, Salón de reuniones among others. Help make decisions about how to build applications and divide work into modules and tasks. Develop documentation of the platforms and a QA testing plan for the QA department using apps like Notion or Miro.',
     },
     {},
     {},
     {
+      index: 4,
       date: '2022 May - Current',
       position: 'Technology Director',
       place: 'PerfectoLabs',
@@ -31,6 +34,7 @@ const ResumeSection = () => {
         'I instructed 40 students in web technologies in groups of 9 to 12 and 13 to 16 years old. Built curricula to teach web development in collaboration with Ozaria. Contributed to the organization of the summer English, programming, and robotics contest, which received international visits.',
     },
     {
+      index: 6,
       date: '2021 Aug - 2023 April',
       position: 'Frontend Developer',
       place: 'Media Revolution',
@@ -47,7 +51,7 @@ const ResumeSection = () => {
         {resume.map((data, index) => {
           return (
             <LayoutAnimationY
-              className={` col-span-2  md:col-span-1 md:flex  ${
+              className={`  col-span-2  md:col-span-1 md:flex  ${
                 !data.position && 'hidden'
               }`}
               key={`resume-${index}`}
@@ -55,16 +59,20 @@ const ResumeSection = () => {
             >
               <div
                 className={`
-                 relative w-full flex-wrap  md:flex ${
-                   isInSequence(index + 1)
-                     ? 'ml-4  flex-row-reverse justify-start md:ml-0 md:mr-4'
-                     : 'ml-4 '
-                 }   lg:gap-5 `}
+                  group relative w-full flex-wrap  md:flex ${
+                    isInSequence(index + 1)
+                      ? 'ml-4  flex-row-reverse justify-start md:ml-0 md:mr-4'
+                      : 'ml-4 '
+                  }   lg:gap-5 `}
               >
                 <div
                   className={`flex max-w-[15px] ${
-                    !(index % 2) && 'md:hidden'
-                  } absolute left-[-23px] mt-[6px] max-h-[15px] min-h-[15px] min-w-[15px]  rounded-full bg-white    md:left-[-25px] `}
+                    !data.description && 'md:hidden'
+                  }  absolute  mt-[6px] max-h-[15px] min-h-[15px] min-w-[15px]  rounded-full bg-white transition-all  group-hover:bg-secondary-500    ${
+                    !(index % 2)
+                      ? ' left-[-23px] md:left-auto md:right-[-22px] '
+                      : 'left-[-23px] md:left-[-25px]'
+                  } `}
                 ></div>
                 <p className="mt-[2px] font-semibold text-gray-500    ">
                   {data?.date}

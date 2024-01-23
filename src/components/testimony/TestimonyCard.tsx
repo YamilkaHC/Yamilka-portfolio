@@ -8,6 +8,7 @@ type TestimonyCardProps = {
   testimonyText: string;
   person: string;
   image: string;
+  position: string;
 };
 
 const TestimonyCard = ({ data }: { data: TestimonyCardProps }) => {
@@ -50,7 +51,12 @@ const TestimonyCard = ({ data }: { data: TestimonyCardProps }) => {
           </div>
 
           <br />
-          <span className=" text-[14px] italic">{data.person}</span>
+          <div className="flex flex-col md:flex-row md:gap-2">
+            <span className=" text-[14px] italic text-secondary-500">
+              {data.person}
+            </span>
+            <span className=" text-[14px] italic">{data.position}</span>
+          </div>
         </div>
       </motion.div>
     </>

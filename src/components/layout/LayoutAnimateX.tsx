@@ -31,6 +31,7 @@ const LayoutAnimateX = ({
     <motion.div
       className={className}
       ref={ref}
+      viewport={{ once: true }}
       variants={boxVariant}
       initial={{ x: -70, opacity: 0 }}
       animate={control}
