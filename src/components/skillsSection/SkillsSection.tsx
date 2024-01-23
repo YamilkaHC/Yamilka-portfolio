@@ -80,10 +80,7 @@ const SkillsSection = () => {
                   className="group flex flex-col items-center"
                 >
                   {data.icon && (
-                    <data.icon
-                      className=" transition-all hover:transition-all group-hover:text-white"
-                      size={30}
-                    />
+                    <data.icon className=" text-secondary-500" size={30} />
                   )}
                   <p className="text-white">{data.title}</p>
                 </div>

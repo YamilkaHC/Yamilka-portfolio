@@ -17,7 +17,7 @@ type SelectedWorkProps = {
 const SelectedWork = () => {
   const works: Array<SelectedWorkProps> = [
     {
-      title: 'OGTIC - Salones de conferencias',
+      title: 'OGTIC - "Salones de conferencias"',
       description:
         'Application that seeks to manage hourly reservations for conference rooms at the OGTIC. Allowed users can create meetings in rooms (depending on their permissions), create meeting minutes, generate attendance lists, among other functions.',
       url: '',
@@ -31,7 +31,7 @@ const SelectedWork = () => {
       ],
     },
     {
-      title: 'Becas',
+      title: 'OGTIC - "Beca tu futuro"',
       description:
         'Scholarship your future, a platform that concentrates all scholarship opportunities in one place. Here the scholarships will be documented and managed from their publication to their application.',
       url: '',
@@ -45,7 +45,7 @@ const SelectedWork = () => {
       ],
     },
     {
-      title: 'Pokedux',
+      title: '"Pokedux"',
       description:
         'Is a personal project for Pokemon enthusiasts to filter, search, and save favorites with detailed descriptions. Explore and create your personal Pokedex with this user-friendly tool.',
       url: 'https://redux-course-puce.vercel.app',

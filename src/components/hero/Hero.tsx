@@ -11,14 +11,13 @@ const Hero = () => (
   <Section yPadding=" min-h-[80vh]  flex flex-col gap-1 justify-center  items-start px-8 md:px-10 lg:px-20 py-10  border border-white border-4 mb-5 lg:mx-20 md:mx-16 mx-4 mt-10">
     <LayoutAnimateX delay={0.2}>
       <h1 className="left-3 whitespace-pre-line text-3xl  font-bold  leading-[30px] text-white md:text-4xl md:leading-[45px] lg:text-6xl lg:leading-[60px]">
-        Hi, I'm Yamilka Henriquez <br /> Web Developer & <br /> Programming
-        Teacher
+        Hi, I'm Yamilka Henriquez
       </h1>
     </LayoutAnimateX>
 
     <LayoutAnimationY delay={0.4}>
-      <h2 className="font-bold leading-loose tracking-widest text-secondary-400 md:text-xl md:leading-hero">
-        WELCOME TO MY ONLINE PORTFOLIO AND CV
+      <h2 className="font-bold  tracking-widest text-secondary-400 md:text-2xl ">
+        Web Developer & Programming Teacher
       </h2>
     </LayoutAnimationY>
     <LayoutAnimationY delay={0.6}>
@@ -30,17 +29,17 @@ const Hero = () => (
       </p>
     </LayoutAnimationY>
     <LayoutAnimationY delay={0.8}>
-      <div className="flex flex-wrap items-end justify-start gap-2 sm:gap-3">
+      <div className="mt-5 flex flex-wrap items-center justify-start gap-2 sm:gap-3">
         <Link legacyBehavior passHref href="/assets/doc/resume.pdf">
           <a
-            className="mt-5 block rounded-full bg-blue-600 px-6 py-3 font-bold tracking-widest text-white transition-all hover:bg-[#2f72de] hover:transition-all md:px-9"
+            className=" block rounded-full bg-blue-600 px-6 py-3 font-bold tracking-widest text-white transition-all hover:bg-[#2f72de] hover:transition-all md:px-9"
             target="_blank"
           >
-            RESUMEN
+            RESUME
           </a>
         </Link>
 
-        <div className="flex items-end justify-start gap-2 sm:gap-3 ">
+        <div className="flex h-full items-center justify-center gap-1 sm:gap-2 ">
           <Link
             legacyBehavior
             passHref
@@ -51,8 +50,8 @@ const Hero = () => (
               title="https://www.linkedin.com/in/yamilka-henriquez-c-b4045314b/"
             >
               <FaLinkedin
-                size={30}
-                className="w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[37px]"
+                size={27}
+                className="mr-[-4px] w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[37px]"
               />
             </a>
           </Link>
@@ -60,7 +59,7 @@ const Hero = () => (
           <Link legacyBehavior passHref href="https://github.com/YamiYamir">
             <a title="https://github.com/YamiYamir" target="_blank">
               <FaGithub
-                size={30}
+                size={27}
                 className="w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[30px]"
               />
             </a>
@@ -68,7 +67,7 @@ const Hero = () => (
           <Link href="mailto:yamilka_268465460@hotmail.com">
             <IoMdMail
               title="yamilka_268465460@hotmail.com"
-              size={37}
+              size={34}
               className="mb-[-4px] w-[33px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[37px]"
             />
           </Link>

@@ -36,7 +36,26 @@ html {
   .progress-bar {
     left: 0px;
   }
-  
+  .change-order1{
+    order: 3;
+  }
+  .change-order2{
+    order: 2
+
+  }
+  .change-order3{
+    order: 1;
+
+  }
+  .change-order4{
+    order: 4;
+
+  }
+  .change-order5{
+    order: 5;
+
+  }
+    
  
 }
 
@@ -68,3 +87,5 @@ transition: transform 0.4s ease-out;
   transform: translateY(0%);
 transition: transform 0.4s ease-out;
 }
+
+

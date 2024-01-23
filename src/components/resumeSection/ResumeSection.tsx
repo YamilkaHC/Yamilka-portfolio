@@ -47,7 +47,7 @@ const ResumeSection = () => {
         {resume.map((data, index) => {
           return (
             <LayoutAnimationY
-              className={`group col-span-2  md:col-span-1 md:flex  ${
+              className={` col-span-2  md:col-span-1 md:flex  ${
                 !data.position && 'hidden'
               }`}
               key={`resume-${index}`}
@@ -55,26 +55,24 @@ const ResumeSection = () => {
             >
               <div
                 className={`
-                 relative flex-wrap  md:flex ${
+                 relative w-full flex-wrap  md:flex ${
                    isInSequence(index + 1)
                      ? 'ml-4  flex-row-reverse justify-start md:ml-0 md:mr-4'
-                     : 'ml-4'
+                     : 'ml-4 '
                  }   lg:gap-5 `}
               >
                 <div
                   className={`flex max-w-[15px] ${
                     !(index % 2) && 'md:hidden'
-                  } absolute left-[-23px] mt-[6px] max-h-[15px] min-h-[15px] min-w-[15px]  rounded-full bg-white opacity-100 transition-all  group-hover:transition-all md:left-[-25px] `}
+                  } absolute left-[-23px] mt-[6px] max-h-[15px] min-h-[15px] min-w-[15px]  rounded-full bg-white    md:left-[-25px] `}
                 ></div>
-                <p className="mt-[2px] font-semibold text-gray-500  opacity-100 transition-all md:opacity-50 md:group-hover:opacity-100 md:group-hover:transition-all">
+                <p className="mt-[2px] font-semibold text-gray-500    ">
                   {data?.date}
                 </p>
-                <div
-                  className={`opacity-100 transition-all md:opacity-50 md:group-hover:opacity-100 md:group-hover:transition-all `}
-                >
+                <div>
                   <div
-                    className={`flex items-center gap-2 ${
-                      isInSequence(index + 1) && ' md:justify-end'
+                    className={`flex flex-col items-start gap-2 ${
+                      isInSequence(index + 1) && ' md:items-end md:justify-end'
                     }`}
                   >
                     <h3
@@ -82,7 +80,9 @@ const ResumeSection = () => {
                     >
                       {data?.position}
                     </h3>
-                    <p className="font-semibold text-gray-500">{data?.place}</p>
+                    <p className="mb-1 mt-[-14px] font-semibold text-gray-500">
+                      {data?.place}
+                    </p>
                   </div>
                   <p
                     className={`max-w-[450px] text-white ${

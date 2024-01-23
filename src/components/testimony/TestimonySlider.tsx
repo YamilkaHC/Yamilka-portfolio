@@ -13,7 +13,7 @@ const TestimonyData = [
   },
   {
     testimonyText:
-      "Yamilka is an extraordinary person and professional. It's not often that one comes across a person with that level of intelligence, proactivity, and hard work. His maturity, programming knowledge, and ability to work in a team go beyond his age. I am pleased and proud to have her as a member of our team.",
+      "Yamilka is an extraordinary person and professional. It's not often that one comes across a person with that level of intelligence, proactivity, and hard work. her maturity, programming knowledge, and ability to work in a team go beyond her age. I am pleased and proud to have her as a member of our team.",
     person: 'Milka Santana, Founder & Advisor',
     image: '/assets/images/people/milka.jpg',
   },

@@ -39,7 +39,7 @@ const Footer = () => (
       </Link>
     </div>
     <div className="flex justify-center gap-3 ">
-      <span className="text-white">© 2023 by Yamilka Henríquez Cosme</span>
+      <span className="text-white">{`©${new Date().getFullYear()} by Yamilka Henríquez Cosme`}</span>
     </div>
   </div>
 );
