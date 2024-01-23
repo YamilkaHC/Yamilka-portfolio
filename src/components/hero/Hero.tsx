@@ -29,7 +29,7 @@ const Hero = () => (
       </p>
     </LayoutAnimationY>
     <LayoutAnimationY delay={0.8}>
-      <div className="mt-5 flex flex-wrap items-center justify-start gap-2 sm:gap-3">
+      <div className="mt-20 flex flex-wrap items-center justify-start gap-2 sm:gap-3">
         <Link legacyBehavior passHref href="/assets/doc/resume.pdf">
           <a
             className=" block rounded-full bg-blue-600 px-8 py-3 font-bold tracking-widest text-white transition-all hover:bg-[#2f72de] hover:transition-all md:px-9"
