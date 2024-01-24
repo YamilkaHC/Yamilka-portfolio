@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
+import ModelCanva from '../3dmodel/3dmodel';
 import LayoutAnimateX from '../layout/LayoutAnimateX';
 import LayoutAnimationY from '../layout/LayoutAnimateY';
 import { Section } from '../layout/Section';
 
 const Hero = () => (
-  <Section yPadding=" hero-height  flex flex-col gap-1 justify-center  items-start px-8 md:px-10 lg:px-20 py-10  border border-white border-4 lg:mx-20 md:mx-16 mx-4 ">
+  <Section yPadding=" hero-height relative flex flex-col gap-1 justify-center  items-start px-8 md:px-10 lg:px-20 py-10  border border-white border-4 lg:mx-20 md:mx-16 mx-4 ">
     <LayoutAnimateX delay={0.2}>
       <h1 className="left-3 whitespace-pre-line text-3xl  font-bold  leading-[30px] text-white md:text-4xl md:leading-[45px] lg:text-6xl lg:leading-[60px]">
         Hi, I'm Yamilka Henriquez
@@ -74,6 +75,7 @@ const Hero = () => (
         </div>
       </div>
     </LayoutAnimationY>
+    <ModelCanva />
   </Section>
 );
 
