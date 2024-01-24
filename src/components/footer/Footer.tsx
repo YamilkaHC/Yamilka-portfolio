@@ -8,11 +8,11 @@ const Footer = () => (
       <Link
         legacyBehavior
         passHref
-        href="https://www.linkedin.com/in/yamilka-henriquez-c-b4045314b/"
+        href="https://www.linkedin.com/in/yamilka-henriquez-cosme-b4045314b/"
       >
         <a
           target="_blank"
-          title="https://www.linkedin.com/in/yamilka-henriquez-c-b4045314b/"
+          title="https://www.linkedin.com/in/yamilka-henriquez-cosme-b4045314b/"
         >
           <FaLinkedin
             size={30}
@@ -21,8 +21,8 @@ const Footer = () => (
         </a>
       </Link>
 
-      <Link legacyBehavior passHref href="https://github.com/YamiYamir">
-        <a title="https://github.com/YamiYamir" target="_blank">
+      <Link legacyBehavior passHref href="https://github.com/YamilkaHC">
+        <a title="https://github.com/YamilkaHC" target="_blank">
           <FaGithub
             size={30}
             className="  w-[25px] text-white transition-all hover:text-[#cccccc] hover:transition-all md:w-[30px]"
