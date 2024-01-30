@@ -10,12 +10,15 @@ export default function ModelCanva() {
     <Canvas
       style={{
         position: 'absolute',
-        // background: '#fff',
+        background: '#fff',
         right: 0,
-        width: '30%',
+        width: '100%',
       }}
       camera={{
         position: [0, 2, 4],
+        fov: 400,
+        near: 0.1,
+        far: 100,
       }}
     >
       <ambientLight intensity={1.25} />
