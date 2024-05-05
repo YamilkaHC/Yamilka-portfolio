@@ -1,16 +1,9 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import type { NextSeoProps } from 'next-seo';
 import { NextSeo } from 'next-seo';
 
-import { AppConfig } from '../../utils/AppConfig';
-
-type IMetaProps = {
-  title: string;
-  description: string;
-  canonical?: string;
-};
-
-const Meta = (props: IMetaProps) => {
+const Meta = (props: NextSeoProps) => {
   const router = useRouter();
 
   return (
@@ -48,23 +41,7 @@ const Meta = (props: IMetaProps) => {
           key="favicon"
         />
       </Head>
-      <NextSeo
-        title={props.title}
-        description={props.description}
-        canonical={props.canonical}
-        twitter={{
-          handle: '@handle',
-          site: '@site',
-          cardType: 'summary_large_image',
-        }}
-        openGraph={{
-          title: props.title,
-          description: props.description,
-          url: props.canonical,
-          locale: AppConfig.locale,
-          site_name: AppConfig.site_name,
-        }}
-      />
+      <NextSeo {...props} />
     </>
   );
 };

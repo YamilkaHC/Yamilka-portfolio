@@ -17,50 +17,80 @@ type SelectedWorkProps = {
   images: Array<{ alt: string; url: string }>;
 };
 
-const SelectedWork = () => {
-  const works: Array<SelectedWorkProps> = [
-    {
-      title: 'OGTIC - "Salones de conferencias"',
-      description:
-        'Application that seeks to manage hourly reservations for conference rooms at the OGTIC. Allowed users can create meetings in rooms (depending on their permissions), create meeting minutes, generate attendance lists, among other functions.',
-      url: '',
-      images: [
-        { alt: '', url: '/assets/images/works/ogtic/ogtic1.png' },
-        { alt: '', url: '/assets/images/works/ogtic/ogtic2.png' },
-        { alt: '', url: '/assets/images/works/ogtic/ogtic3.png' },
-        { alt: '', url: '/assets/images/works/ogtic/ogtic4.png' },
-        { alt: '', url: '/assets/images/works/ogtic/ogtic5.png' },
-        { alt: '', url: '/assets/images/works/ogtic/ogtic6.png' },
-      ],
-    },
-    {
-      title: 'OGTIC - "Beca tu futuro"',
-      description:
-        'Scholarship your future, a platform that concentrates all scholarship opportunities in one place. Here the scholarships will be documented and managed from their publication to their application.',
-      url: '',
-      images: [
-        { alt: '', url: '/assets/images/works/becas/becas1.png' },
-        { alt: '', url: '/assets/images/works/becas/becas2.png' },
-        { alt: '', url: '/assets/images/works/becas/becas3.png' },
-        { alt: '', url: '/assets/images/works/becas/becas4.png' },
-        { alt: '', url: '/assets/images/works/becas/becas5.png' },
-        { alt: '', url: '/assets/images/works/becas/becas6.png' },
-      ],
-    },
-    {
-      title: '"Pokedux"',
-      description:
-        'Is a personal project for Pokemon enthusiasts to filter, search, and save favorites with detailed descriptions. Explore and create your personal Pokedex with this user-friendly tool.',
-      url: 'https://redux-course-puce.vercel.app',
-      images: [
-        { alt: '', url: '/assets/images/works/pokedux/pokedux1.png' },
-        { alt: '', url: '/assets/images/works/pokedux/pokedux2.png' },
-        { alt: '', url: '/assets/images/works/pokedux/pokedux3.png' },
-        { alt: '', url: '/assets/images/works/pokedux/pokedux4.png' },
-      ],
-    },
-  ];
+const works: Array<SelectedWorkProps> = [
+  {
+    title: 'OGTIC - "Salones de conferencias"',
+    description:
+      'Application that seeks to manage hourly reservations for conference rooms at the OGTIC. Allowed users can create meetings in rooms (depending on their permissions), create meeting minutes, generate attendance lists, among other functions.',
+    url: '',
+    images: [
+      {
+        alt: "Ogtic's photo 1",
+        url: '/assets/images/works/ogtic/ogtic1.png',
+      },
+      {
+        alt: "Ogtic's photo 2",
+        url: '/assets/images/works/ogtic/ogtic2.png',
+      },
+      {
+        alt: "Ogtic's photo 3",
+        url: '/assets/images/works/ogtic/ogtic3.png',
+      },
+      {
+        alt: "Ogtic's photo 4",
+        url: '/assets/images/works/ogtic/ogtic4.png',
+      },
+      {
+        alt: "Ogtic's photo 5",
+        url: '/assets/images/works/ogtic/ogtic5.png',
+      },
+      {
+        alt: "Ogtic's photo 6",
+        url: '/assets/images/works/ogtic/ogtic6.png',
+      },
+    ],
+  },
+  {
+    title: 'OGTIC - "Beca tu futuro"',
+    description:
+      'Scholarship your future, a platform that concentrates all scholarship opportunities in one place. Here the scholarships will be documented and managed from their publication to their application.',
+    url: '',
+    images: [
+      { alt: "Beca's photo 1", url: '/assets/images/works/becas/becas1.png' },
+      { alt: "Beca's photo 2", url: '/assets/images/works/becas/becas2.png' },
+      { alt: "Beca's photo 3", url: '/assets/images/works/becas/becas3.png' },
+      { alt: "Beca's photo 4", url: '/assets/images/works/becas/becas4.png' },
+      { alt: "Beca's photo 5", url: '/assets/images/works/becas/becas5.png' },
+      { alt: "Beca's photo ", url: '/assets/images/works/becas/becas6.png' },
+    ],
+  },
+  {
+    title: '"Pokedux"',
+    description:
+      'Is a personal project for Pokemon enthusiasts to filter, search, and save favorites with detailed descriptions. Explore and create your personal Pokedex with this user-friendly tool.',
+    url: 'https://redux-course-puce.vercel.app',
+    images: [
+      {
+        alt: "Pokedux's photo 1",
+        url: '/assets/images/works/pokedux/pokedux1.png',
+      },
+      {
+        alt: "Pokedux's photo 2",
+        url: '/assets/images/works/pokedux/pokedux2.png',
+      },
+      {
+        alt: "Pokedux's photo 3",
+        url: '/assets/images/works/pokedux/pokedux3.png',
+      },
+      {
+        alt: "Pokedux's photo 4",
+        url: '/assets/images/works/pokedux/pokedux4.png',
+      },
+    ],
+  },
+];
 
+const SelectedWork = () => {
   const isMobile = useIsMobile();
   const [onClick, setOnClick] = useState(false);
 
@@ -101,13 +131,13 @@ const SelectedWork = () => {
               {currentWork.description}
             </p>
             {currentWork?.url && (
-              <Link legacyBehavior passHref href={currentWork?.url}>
-                <a
-                  className="mt-4 flex items-center gap-2 text-sm font-extrabold uppercase text-blue-500 transition-all hover:text-[#2f72de] hover:transition-all"
-                  target="_blank"
-                >
-                  Go to this project <FaArrowRight />
-                </a>
+              <Link
+                rel="noopener noreferrer"
+                href={currentWork?.url}
+                className="mt-4 flex items-center gap-2 text-sm font-extrabold uppercase text-blue-500 transition-all hover:text-[#2f72de] hover:transition-all"
+                target="_blank"
+              >
+                Go to this project <FaArrowRight />
               </Link>
             )}
           </div>

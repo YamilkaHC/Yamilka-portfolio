@@ -13,36 +13,37 @@ type Resume = {
   index?: number;
 };
 
+const resume: Array<Resume> = [
+  {
+    date: '2023 April -  Current',
+    position: 'Web Developer',
+    place: 'OGTIC',
+    index: 2,
+    description:
+      'Collaborate as a team in the construction of multiple web applications for markets such as gob.do, becas.gob.do, Salón de reuniones among others. Help make decisions about how to build applications and divide work into modules and tasks. Develop documentation of the platforms and a QA testing plan for the QA department using apps like Notion or Miro.',
+  },
+  {},
+  {},
+  {
+    index: 4,
+    date: '2022 May - Current',
+    position: 'Technology Director',
+    place: 'PerfectoLabs',
+    description:
+      'I instructed 40 students in web technologies in groups of 9 to 12 and 13 to 16 years old. Built curricula to teach web development in collaboration with Ozaria. Contributed to the organization of the summer English, programming, and robotics contest, which received international visits.',
+  },
+  {
+    index: 6,
+    date: '2021 Aug - 2023 April',
+    position: 'Frontend Developer',
+    place: 'Media Revolution',
+    description:
+      'Collaborate as a team in the construction of multiple webapplications for markets such as (Crypto, lottery, online games, and transaction platforms). Collaborate in making decisions on how to build the applications, which technologies are the most optimal, and in the division of work into modules and tasks. Work on bug fixes and application optimization.',
+  },
+  {},
+];
+
 const ResumeSection = () => {
-  const resume: Array<Resume> = [
-    {
-      date: '2023 April -  Current',
-      position: 'Web Developer',
-      place: 'OGTIC',
-      index: 2,
-      description:
-        'Collaborate as a team in the construction of multiple web applications for markets such as gob.do, becas.gob.do, Salón de reuniones among others. Help make decisions about how to build applications and divide work into modules and tasks. Develop documentation of the platforms and a QA testing plan for the QA department using apps like Notion or Miro.',
-    },
-    {},
-    {},
-    {
-      index: 4,
-      date: '2022 May - Current',
-      position: 'Technology Director',
-      place: 'PerfectoLabs',
-      description:
-        'I instructed 40 students in web technologies in groups of 9 to 12 and 13 to 16 years old. Built curricula to teach web development in collaboration with Ozaria. Contributed to the organization of the summer English, programming, and robotics contest, which received international visits.',
-    },
-    {
-      index: 6,
-      date: '2021 Aug - 2023 April',
-      position: 'Frontend Developer',
-      place: 'Media Revolution',
-      description:
-        'Collaborate as a team in the construction of multiple webapplications for markets such as (Crypto, lottery, online games, and transaction platforms). Collaborate in making decisions on how to build the applications, which technologies are the most optimal, and in the division of work into modules and tasks. Work on bug fixes and application optimization.',
-    },
-    {},
-  ];
   return (
     <div id="resume" className=" mb-20 flex  flex-col justify-center  ">
       <TitleSection title="Resume" />
@@ -51,7 +52,7 @@ const ResumeSection = () => {
         {resume.map((data, index) => {
           return (
             <LayoutAnimationY
-              className={`  col-span-2  md:col-span-1 md:flex  ${
+              className={`col-span-2  md:col-span-1 md:flex  ${
                 !data.position && 'hidden'
               }`}
               key={`resume-${index}`}
